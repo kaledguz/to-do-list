@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+html {
+  background-image: url(https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: "Akaya Kanadaka", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  overflow-y: hidden;
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  margin: 20px;
+}
+#container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}

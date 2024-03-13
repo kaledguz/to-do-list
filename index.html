@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to-do-list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="https://github.com/kaledguz/to-do-list">Git Hub</a></li>
+          <li><a href="">Information</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>To-do-List</h1>
+      <section id="inputTaches">
+        <input type="text" id="nouvelleTache" placeholder="ajout d'une tache" />
+        <input type="button" value="+" onclick="ajouterUneTache()" />
+      </section>
+      <section id="ajoutDesTaches">
+        <ul id="listeTaches"></ul>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script>
+      function ajouterUneTache() {
+        const nouvelleTache = document.getElementbyID("nouvelleTache").value;
+      }
+    </script>
+  </body>
+</html>
