@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
 html {
-  background-image: url(https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #111111;
 }
 * {
   margin: 0;
@@ -19,8 +17,33 @@ nav ul {
   display: flex;
   margin: 20px;
 }
+div {
+  background: linear-gradient(#8b568c, #77aad9);
+  height: 30rem;
+  margin: 40px;
+  border-radius: 15px;
+}
+h1 {
+  margin: 20px;
+  color: #fff;
+  font-size: 2rem;
+}
 #container {
   width: 100%;
   min-height: 100vh;
-  padding: 10px;
+  padding: 20px;
+}
+#nouvelleTache {
+  background: linear-gradient(to right, #ce8bbd, #c6b5d6);
+  border-radius: 5px;
+  border: none;
+  height: 2.3rem;
+  width: 20rem;
+}
+#listeTaches li {
+  list-style-type: none; /* Supprimer les puces */
+  margin-bottom: 5px; /* Ajouter un espacement entre les éléments de la liste */
+  padding: 10px; /* Ajouter un remplissage à chaque élément de la liste */
+  background: linear-gradient(to right, #ce8bbd, #c6b5d6);
+  border-radius: 5px; /* Ajouter des coins arrondis */
 }

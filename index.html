@@ -11,25 +11,46 @@
       <nav>
         <ul>
           <li><a href="https://github.com/kaledguz/to-do-list">Git Hub</a></li>
-          <li><a href="">Information</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>To-do-List</h1>
-      <section id="inputTaches">
-        <input type="text" id="nouvelleTache" placeholder="ajout d'une tache" />
-        <input type="button" value="+" onclick="ajouterUneTache()" />
-      </section>
-      <section id="ajoutDesTaches">
-        <ul id="listeTaches"></ul>
-      </section>
+      <div>
+        <h1>To-do-List</h1>
+        <section id="inputTaches">
+          <input
+            type="text"
+            id="nouvelleTache"
+            placeholder="Ajouter une tâche"
+            onkeypress="ajouterTacheKeyPress(event)"
+          />
+          <input type="button" value="+" onclick="ajouterUneTache()" />
+        </section>
+        <section id="ajoutDesTaches">
+          <ul id="listeTaches"></ul>
+        </section>
+      </div>
     </main>
 
     <footer></footer>
     <script>
+      function ajouterTacheKeyPress(event) {
+        if (event.keyCode === 13) {
+          ajouterUneTache();
+        }
+      }
+
       function ajouterUneTache() {
-        const nouvelleTache = document.getElementbyID("nouvelleTache").value;
+        const nouvelleTache = document.getElementById("nouvelleTache").value;
+        if (nouvelleTache.trim() !== "") {
+          const nouvelElementLi = document.createElement("li");
+          nouvelElementLi.innerText = nouvelleTache;
+          const listeTaches = document.getElementById("listeTaches");
+          listeTaches.appendChild(nouvelElementLi);
+          document.getElementById("nouvelleTache").value = "";
+        } else {
+          alert("ce n'est pas une tache valide");
+        }
       }
     </script>
   </body>
